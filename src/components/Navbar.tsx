@@ -77,7 +77,7 @@ const Navbar = () => {
                     <Link
                       key={service.path}
                       to={service.path}
-                      className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-primary transition-colors first:rounded-t-lg last:rounded-b-lg"
+                      className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-white transition-colors first:rounded-t-lg last:rounded-b-lg"
                     >
                       {service.name}
                     </Link>
@@ -99,7 +99,7 @@ const Navbar = () => {
                     <Link
                       key={product.path}
                       to={product.path}
-                      className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-primary transition-colors first:rounded-t-lg last:rounded-b-lg"
+                      className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-white transition-colors first:rounded-t-lg last:rounded-b-lg"
                     >
                       {product.name}
                     </Link>
@@ -121,7 +121,7 @@ const Navbar = () => {
                   <Link
                     key={insight.path}
                     to={insight.path}
-                    className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-primary transition-colors first:rounded-t-lg last:rounded-b-lg"
+                    className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-white transition-colors first:rounded-t-lg last:rounded-b-lg"
                   >
                     {insight.name}
                   </Link>
@@ -135,7 +135,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-muted-foreground hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-muted-foreground hover:text-white transition-colors"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -152,7 +152,7 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={() => toggleDropdown("services")}
-                  className="w-full flex items-center justify-between px-4 py-2 text-foreground hover:text-white transition-colors"
+                  className="w-full flex items-center justify-between px-4 py-2 text-muted-foreground hover:text-white transition-colors"
                 >
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "services" ? "rotate-180" : ""}`} />
@@ -160,7 +160,7 @@ const Navbar = () => {
                 {openDropdown === "services" && (
                   <div className="pl-8 space-y-2 mt-2 animate-fade-in">
                     {services.map((service) => (
-                      <Link key={service.path} to={service.path} className="block px-4 py-2 text-muted-foreground hover:text-primary transition-colors">{service.name}</Link>
+                      <Link key={service.path} to={service.path} className="block px-4 py-2 text-muted-foreground hover:text-white transition-colors">{service.name}</Link>
                     ))}
                   </div>
                 )}
@@ -170,7 +170,7 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={() => toggleDropdown("products")}
-                  className="w-full flex items-center justify-between px-4 py-2 text-foreground hover:text-white transition-colors"
+                  className="w-full flex items-center justify-between px-4 py-2 text-muted-foreground hover:text-white transition-colors"
                 >
                   <span>Products</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "products" ? "rotate-180" : ""}`} />
@@ -178,7 +178,7 @@ const Navbar = () => {
                 {openDropdown === "products" && (
                   <div className="pl-8 space-y-2 mt-2 animate-fade-in">
                     {products.map((product) => (
-                      <Link key={product.path} to={product.path} className="block px-4 py-2 text-muted-foreground hover:text-primary transition-colors">{product.name}</Link>
+                      <Link key={product.path} to={product.path} className="block px-4 py-2 text-muted-foreground hover:text-white transition-colors">{product.name}</Link>
                     ))}
                   </div>
                 )}
@@ -188,7 +188,7 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={() => toggleDropdown("insights")}
-                  className="w-full flex items-center justify-between px-4 py-2 text-foreground hover:text-white transition-colors"
+                  className="w-full flex items-center justify-between px-4 py-2 text-muted-foreground hover:text-white transition-colors"
                 >
                   <span>Insights</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "insights" ? "rotate-180" : ""}`} />
@@ -196,7 +196,7 @@ const Navbar = () => {
                 {openDropdown === "insights" && (
                   <div className="pl-8 space-y-2 mt-2 animate-fade-in">
                     {insights.map((insight) => (
-                      <Link key={insight.path} to={insight.path} className="block px-4 py-2 text-muted-foreground hover:text-primary transition-colors">{insight.name}</Link>
+                      <Link key={insight.path} to={insight.path} className="block px-4 py-2 text-muted-foreground hover:text-white transition-colors">{insight.name}</Link>
                     ))}
                   </div>
                 )}
