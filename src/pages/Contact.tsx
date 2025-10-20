@@ -99,8 +99,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-primary mb-2">Email</h3>
-                      <p className="text-muted-foreground">info@cm2itsolutions.com</p>
-                      <p className="text-muted-foreground">support@cm2itsolutions.com</p>
+                      <p className="text-muted-foreground">hr@onfocussoftware.com</p>
+                      {/* <p className="text-muted-foreground">hr@onfocussoftware.com</p> */}
                     </div>
                   </CardContent>
                 </Card>
@@ -112,8 +112,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-primary mb-2">Phone</h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                      <p className="text-muted-foreground">+1 (555) 765-4321</p>
+                      <p className="text-muted-foreground">+1 (646) 359-1901</p>
+                      {/* <p className="text-muted-foreground">+1 (555) 765-4321</p> */}
                     </div>
                   </CardContent>
                 </Card>
@@ -125,9 +125,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-primary mb-2">Office</h3>
-                      <p className="text-muted-foreground">123 Tech Street</p>
-                      <p className="text-muted-foreground">Innovation City, IC 12345</p>
-                      <p className="text-muted-foreground">United States</p>
+                      <p className="text-muted-foreground">545 Metro Place South Suite, 100</p>
+                      <p className="text-muted-foreground">Dublin, OH 43017</p>
+                      <p className="text-muted-foreground">USA</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -137,7 +137,8 @@ const Contact = () => {
                   <CardContent className="p-0">
                     <div className="h-64 bg-muted rounded-lg overflow-hidden">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9476519598093!2d-73.99185268459395!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.212310483609!2d-83.13238690000001!3d40.0929791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883893252959b263%3A0x2ade6a99b698cde2!2s545%20Metro%20Pl%20S%20Ste%2C%20100%2C%20Dublin%2C%20OH%2043017%2C%20USA!5e0!3m2!1sen!2sin!4v1760960253669!5m2!1sen!2sin"
+                        // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9476519598093!2d-73.99185268459395!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
