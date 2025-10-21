@@ -87,7 +87,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Contact</h4>
             <div className="space-y-2 text-sm opacity-90">
               <p>Email: hr@onfocussoftware.com</p>
-              <p>Phone: +1 (646) 359-1901</p>
+              <p>Phone: +1 (480) 886-6824</p>
               <p>Address: 545 Metro Place South Suite, 100, Dublin, OH 43017</p>
             </div>
           </div>
