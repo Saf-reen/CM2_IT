@@ -5,8 +5,8 @@ import aboutBg from "@/assets/about-bg.jpg";
 const About = () => {
   return (
     <div className="min-h-screen animate-fade-in">
-      {/* Hero Section */}
-      <section
+      {/* Hero Section changes*/}
+      <section 
         className="relative h-[60vh] flex items-center justify-center text-center text-primary-foreground"
         style={{
           backgroundImage: `linear-gradient(rgba(56, 73, 89, 0.85), rgba(56, 73, 89, 0.85)), url(${aboutBg})`,
