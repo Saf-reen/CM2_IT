@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="onFocus Software Inc Logo" className="h-8 w-auto" />
+            <img src={logo} alt="onFocus Software Inc" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
