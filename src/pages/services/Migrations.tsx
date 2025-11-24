@@ -2,7 +2,7 @@ import { Check, Cloud, Server, Scaling } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import servicesBg from "@/assets/services-bg.jpg";
+import HeroSection from "@/components/HeroSection";
 
 const CloudSolutions = () => {
   const features = [
@@ -17,21 +17,10 @@ const CloudSolutions = () => {
   return (
     <div className="min-h-screen animate-fade-in">
       {/* Hero Section */}
-      <section
-        className="relative h-[60vh] flex items-center justify-center text-center text-primary-foreground"
-        style={{
-          backgroundImage: `linear-gradient(rgba(56, 73, 89, 0.85), rgba(56, 73, 89, 0.85)), url(${servicesBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="container mx-auto px-4 z-10 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Cloud Solutions</h1>
-          <p className="text-xl md:text-2xl opacity-90">
-            Scalable, secure, and cost-effective cloud infrastructure
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Cloud Solutions"
+        subtitle="Scalable, secure, and cost-effective cloud infrastructure"
+      />
 
       {/* Main Content */}
       <section className="py-20 bg-background">

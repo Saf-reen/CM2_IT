@@ -8,9 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">
-              OnFocus Software Inc
-            </h3>
+            <img src="/logo.png" alt="onFocus Software Logo" className="h-10" />
             <p className="text-sm opacity-90">
               Delivering innovative technology solutions for modern businesses.
             </p>
@@ -70,8 +68,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/products/crm" className="text-sm hover:text-secondary transition-colors">
-                  Products
+                <Link to="/solutions/crm" className="text-sm hover:text-secondary transition-colors">
+                  Solutions
                 </Link>
               </li>
               <li>

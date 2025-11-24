@@ -1,31 +1,26 @@
-import { Check, UserCheck, Calendar, FileText, Award } from "lucide-react";
+import { Check, Monitor, Layout, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import HeroSection from "@/components/HeroSection";
 
-const HRMS = () => {
+const AppDesign = () => {
   const features = [
-    "Employee Database Management",
-    "Attendance Tracking",
-    "Payroll Processing",
-    "Leave Management",
-    "Performance Reviews",
-    "Recruitment Module",
-    "Training & Development",
-    "Employee Self-Service Portal",
+    "Native iOS and Android Design",
+    "Intuitive User Interfaces",
+    "Engaging User Experiences",
+    "Cross-Platform Compatibility",
+    "Performance Optimization",
+    "App Store Guidelines Compliance",
   ];
 
   return (
     <div className="min-h-screen animate-fade-in">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center text-center bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
-        <div className="container mx-auto px-4 z-10 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">HRMS Solution</h1>
-          <p className="text-xl md:text-2xl opacity-90">
-            Complete human resource management system
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="App Design"
+        subtitle="Crafting beautiful mobile experiences for iOS and Android"
+      />
 
       {/* Main Content */}
       <section className="py-20 bg-background">
@@ -34,65 +29,65 @@ const HRMS = () => {
             <Card className="border-2 border-primary animate-scale-in mb-12">
               <CardContent className="p-8">
                 <h2 className="text-3xl font-bold text-primary mb-6">
-                  Human Resource Management System
+                  Mobile App Design Excellence
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Our HRMS solution simplifies and automates all aspects of human resource
-                  management. From recruitment to retirement, manage your entire workforce
-                  efficiently with our comprehensive platform. Streamline HR processes, improve
-                  employee engagement, and make data-driven decisions.
+                  Our mobile app design services focus on creating engaging, intuitive experiences
+                  that users love. We understand that mobile apps require a unique approach,
+                  balancing functionality with simplicity to deliver seamless interactions on
+                  smaller screens.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  With intuitive interfaces for both HR professionals and employees, our HRMS
-                  reduces administrative burden while providing powerful tools for talent
-                  management, payroll processing, and compliance tracking.
+                  Whether you need a native iOS app, Android app, or cross-platform solution, our
+                  design team has the expertise to bring your vision to life. We follow platform-
+                  specific guidelines while maintaining your brand's unique identity.
                 </p>
               </CardContent>
             </Card>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <Card className="border-2 hover:border-primary transition-all animate-fade-in">
                 <CardContent className="p-6 text-center">
                   <div className="p-4 bg-secondary rounded-full inline-block mb-4">
-                    <UserCheck className="w-8 h-8 text-primary" />
+                    <Monitor className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Employees</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-2">Platform Native</h3>
+                  <p className="text-muted-foreground">
+                    Designs that feel native to iOS and Android
+                  </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 hover:border-primary transition-all animate-fade-in">
                 <CardContent className="p-6 text-center">
                   <div className="p-4 bg-secondary rounded-full inline-block mb-4">
-                    <Calendar className="w-8 h-8 text-primary" />
+                    <Layout className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Scheduling</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-2">User-Centric</h3>
+                  <p className="text-muted-foreground">
+                    Intuitive interfaces for better engagement
+                  </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 hover:border-primary transition-all animate-fade-in">
                 <CardContent className="p-6 text-center">
                   <div className="p-4 bg-secondary rounded-full inline-block mb-4">
-                    <FileText className="w-8 h-8 text-primary" />
+                    <Sparkles className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">Payroll</h3>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-primary transition-all animate-fade-in">
-                <CardContent className="p-6 text-center">
-                  <div className="p-4 bg-secondary rounded-full inline-block mb-4">
-                    <Award className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-primary">Performance</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-2">Modern UI</h3>
+                  <p className="text-muted-foreground">
+                    Latest design trends and animations
+                  </p>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Key Features */}
+            {/* Features List */}
             <Card className="border-2 border-primary animate-scale-in">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-6">Key Features</h3>
+                <h3 className="text-2xl font-bold text-primary mb-6">What's Included</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {features.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3 animate-fade-in">
@@ -109,7 +104,7 @@ const HRMS = () => {
             {/* CTA */}
             <div className="mt-12 text-center animate-fade-in-up">
               <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link to="/contact">See HRMS in Action</Link>
+                <Link to="/contact">Start Your App Design Project</Link>
               </Button>
             </div>
           </div>
@@ -119,4 +114,4 @@ const HRMS = () => {
   );
 };
 
-export default HRMS;
+export default AppDesign;

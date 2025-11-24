@@ -1,37 +1,26 @@
-import { Check, Monitor, Layout, Sparkles } from "lucide-react";
+import { Check, Palette, Smartphone, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import servicesBg from "@/assets/services-bg.jpg";
+import HeroSection from "@/components/HeroSection";
 
-const AppDesign = () => {
+const WebDesign = () => {
   const features = [
-    "Native iOS and Android Design",
-    "Intuitive User Interfaces",
-    "Engaging User Experiences",
-    "Cross-Platform Compatibility",
-    "Performance Optimization",
-    "App Store Guidelines Compliance",
+    "Responsive Design for All Devices",
+    "Modern UI/UX Principles",
+    "SEO-Optimized Structure",
+    "Fast Loading Times",
+    "Custom Design Systems",
+    "Accessibility Compliance",
   ];
 
   return (
     <div className="min-h-screen animate-fade-in">
       {/* Hero Section */}
-      <section
-        className="relative h-[60vh] flex items-center justify-center text-center text-primary-foreground"
-        style={{
-          backgroundImage: `linear-gradient(rgba(56, 73, 89, 0.85), rgba(56, 73, 89, 0.85)), url(${servicesBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="container mx-auto px-4 z-10 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">App Design</h1>
-          <p className="text-xl md:text-2xl opacity-90">
-            Crafting beautiful mobile experiences for iOS and Android
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Web Design"
+        subtitle="Creating stunning, user-friendly websites that convert"
+      />
 
       {/* Main Content */}
       <section className="py-20 bg-background">
@@ -40,18 +29,18 @@ const AppDesign = () => {
             <Card className="border-2 border-primary animate-scale-in mb-12">
               <CardContent className="p-8">
                 <h2 className="text-3xl font-bold text-primary mb-6">
-                  Mobile App Design Excellence
+                  Professional Web Design Services
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Our mobile app design services focus on creating engaging, intuitive experiences
-                  that users love. We understand that mobile apps require a unique approach,
-                  balancing functionality with simplicity to deliver seamless interactions on
-                  smaller screens.
+                  Our web design services combine aesthetics with functionality to create websites
+                  that not only look beautiful but also deliver exceptional user experiences. We
+                  understand that your website is often the first impression customers have of your
+                  business, and we're committed to making it count.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Whether you need a native iOS app, Android app, or cross-platform solution, our
-                  design team has the expertise to bring your vision to life. We follow platform-
-                  specific guidelines while maintaining your brand's unique identity.
+                  From concept to launch, our team works closely with you to understand your brand,
+                  goals, and target audience. We employ the latest design trends and technologies
+                  to ensure your website stands out in today's competitive digital landscape.
                 </p>
               </CardContent>
             </Card>
@@ -61,11 +50,11 @@ const AppDesign = () => {
               <Card className="border-2 hover:border-primary transition-all animate-fade-in">
                 <CardContent className="p-6 text-center">
                   <div className="p-4 bg-secondary rounded-full inline-block mb-4">
-                    <Monitor className="w-8 h-8 text-primary" />
+                    <Palette className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary mb-2">Platform Native</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-2">Custom Design</h3>
                   <p className="text-muted-foreground">
-                    Designs that feel native to iOS and Android
+                    Unique designs tailored to your brand identity
                   </p>
                 </CardContent>
               </Card>
@@ -73,11 +62,11 @@ const AppDesign = () => {
               <Card className="border-2 hover:border-primary transition-all animate-fade-in">
                 <CardContent className="p-6 text-center">
                   <div className="p-4 bg-secondary rounded-full inline-block mb-4">
-                    <Layout className="w-8 h-8 text-primary" />
+                    <Smartphone className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary mb-2">User-Centric</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-2">Mobile-First</h3>
                   <p className="text-muted-foreground">
-                    Intuitive interfaces for better engagement
+                    Optimized for all devices and screen sizes
                   </p>
                 </CardContent>
               </Card>
@@ -85,11 +74,11 @@ const AppDesign = () => {
               <Card className="border-2 hover:border-primary transition-all animate-fade-in">
                 <CardContent className="p-6 text-center">
                   <div className="p-4 bg-secondary rounded-full inline-block mb-4">
-                    <Sparkles className="w-8 h-8 text-primary" />
+                    <Zap className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary mb-2">Modern UI</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-2">Performance</h3>
                   <p className="text-muted-foreground">
-                    Latest design trends and animations
+                    Lightning-fast load times for better UX
                   </p>
                 </CardContent>
               </Card>
@@ -115,7 +104,7 @@ const AppDesign = () => {
             {/* CTA */}
             <div className="mt-12 text-center animate-fade-in-up">
               <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link to="/contact">Start Your App Design Project</Link>
+                <Link to="/contact">Get Started with Web Design</Link>
               </Button>
             </div>
           </div>
@@ -125,4 +114,4 @@ const AppDesign = () => {
   );
 };
 
-export default AppDesign;
+export default WebDesign;

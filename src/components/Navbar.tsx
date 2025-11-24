@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import  logo  from "@/assets/logo.png";
-
-
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,116 +23,229 @@ const Navbar = () => {
   }, [location]);
 
   const services = [
-    { name: "Web Design", path: "/services/web-design" },
-    { name: "App Design", path: "/services/app-design" },
-    { name: "Software Development", path: "/services/software-development" },
-    { name: "Cloud Solutions", path: "/services/cloud-solutions" },
+    { name: "Implementation", path: "/services/web-design" },
+    { name: "Migrations", path: "/services/app-design" },
+    { name: "Application Development", path: "/services/software-development" },
+    { name: "Integration", path: "/services/cloud-solutions" },
+    { name: "Rollouts", path: "/services/web-design" },
+    { name: "Upgrades", path: "/services/app-design" },
+    { name: "Support & Maintenance", path: "/services/software-development" },
+    { name: "Testing", path: "/services/cloud-solutions" },
+    { name: "Training", path: "/services/cloud-solutions" },
   ];
 
-  const products = [
-    { name: "CRM", path: "/products/crm" },
-    { name: "ERP", path: "/products/erp" },
-    { name: "HRMS", path: "/products/hrms" },
+  const solutions = [
+    { name: "Rise with SAP", path: "/solutions/rise-with-sap" },
+    { name: "SAP S/4 HANA Private Cloud", path: "/solutions/erp" },
+    { name: "SAP S/4 HANA Public Cloud", path: "/solutions/hrms" },
+    { name: "SAP Success Factors", path: "/solutions/crm" },
+    { name: "SAP Commerce Cloud", path: "/solutions/erp" },
+    { name: "SAP Concur", path: "/solutions/hrms" },
+    { name: "SAP Ariba", path: "/solutions/crm" },
+    { name: "SAP Manufacturing Execution", path: "/solutions/erp" },
+    { name: "SAP Manufacturing Logistics", path: "/solutions/hrms" },
+    { name: "SAP Digital Manufacturing", path: "/solutions/crm" },
+    { name: "SAP Business Network for Logistics", path: "/solutions/erp" },
+    { name: "SAP Fieldglass", path: "/solutions/hrms" },
+    { name: "SAP Extended Warehouse Management", path: "/solutions/crm" },
+    { name: "SAP Product Lifecycle", path: "/solutions/erp" },
+    { name: "SAP Asset Performance Management", path: "/solutions/hrms" },
+    { name: "SAP Field Service Management", path: "/solutions/crm" },
   ];
 
-  const insights = [
-    { name: "Case Studies", path: "/insights/case-studies" },
-    { name: "Blog", path: "/insights/blog" },
-    { name: "News & Updates", path: "/insights/news" },
-    
+  const industries = [
+    { name: "Banking & Finance", path: "/industries/case-studies" },
+    { name: "Public Sector", path: "/industries/blog" },
+    { name: "Energy & Utilities", path: "/industries/news" },
+    { name: "Healthcare", path: "/industries/case-studies" },
+    { name: "Dairy", path: "/industries/blog" },
+    { name: "Textile", path: "/industries/news" },
+    { name: "Manufacturing", path: "/industries/case-studies" },
+    { name: "Retail", path: "/industries/blog" },
+    { name: "Travel", path: "/industries/news" },
+    { name: "Telecom", path: "/industries/case-studies" },
   ];
+
+  const company = [
+    { name: "About Us", path: "/about" },
+    { name: "Approach", path: "/about" },
+    { name: "Careers", path: "/about" },
+    { name: "Contact Us", path: "/contact" },
+  ]
 
   const toggleDropdown = (dropdown: string) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
+  // split array into columns where first column has 6 items and subsequent columns have up to 5 items
+  const splitIntoColumns = <T,>(arr: T[]): T[][] => {
+    if (arr.length <= 5) return [arr];
+    const cols: T[][] = [];
+    cols.push(arr.slice(0, 6));
+    const rest = arr.slice(6);
+    for (let i = 0; i < rest.length; i += 5) {
+      cols.push(rest.slice(i, i + 5));
+    }
+    return cols.slice(0, 3); // cap at 3 columns
+  };
+
+  // helper to detect active route for top-level links
+  const isActive = (href: string) => {
+    if (href === "/") return location.pathname === "/";
+    return location.pathname === href || location.pathname.startsWith(href + "/");
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary shadow-md py-3">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-primary shadow-md h-20' : 'bg-transparent h-24'}`}>
+      <div className="container mx-auto px-4 h-full">
+        <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img src={logo} alt="onFocus Software Inc Logo" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-muted-foreground hover:text-white transition-colors font-medium">Home</Link>
-            <Link to="/about" className="text-muted-foreground hover:text-white transition-colors font-medium">About Us</Link>
+          <div className="hidden lg:flex items-center space-x-8 h-full">
+
+            {/* Solutions Dropdown */}
+            <div className="group relative h-full flex items-center">
+              <Link
+                to="/solutions"
+                className={`relative flex items-center space-x-1 transition-colors font-medium ${isScrolled ? 'text-muted-foreground hover:text-white' : 'text-primary-foreground hover:text-primary-foreground/90'} ${isActive('/solutions') ? 'underline decoration-2 decoration-current underline-offset-4' : ''}`}
+              >
+                <span>Solutions</span>
+                <ChevronDown className="w-4 h-4" />
+                <span className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary rounded transition-opacity ${isActive('/solutions') ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} aria-hidden />
+              </Link>
+              <div className="absolute top-full right-0 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2">
+                <div className="w-max bg-card rounded shadow-lg overflow-hidden">
+                  <div className="p-6">
+                    {(() => {
+                      const cols = splitIntoColumns(solutions);
+                      const colCount = cols.length;
+                      return (
+                        <div className={`grid ${colCount === 1 ? 'grid-cols-1' : colCount === 2 ? 'grid-cols-2' : 'grid-cols-3'} gap-x-12`}>
+                          {cols.map((col, idx) => (
+                            <div key={idx} className="flex flex-col space-y-1">
+                              {col.map((s) => (
+                                <Link key={s.path + s.name} to={s.path} className="block px-4 py-2 text-foreground hover:bg-secondary hover:text-white transition-colors rounded">{s.name}</Link>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Services Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={() => toggleDropdown("services")}
-                className="flex items-center space-x-1 text-muted-foreground hover:text-white transition-colors font-medium"
+            <div className="group relative h-full flex items-center">
+              <Link
+                to="/services"
+                className={`relative flex items-center space-x-1 transition-colors font-medium ${isScrolled ? 'text-muted-foreground hover:text-white' : 'text-primary-foreground hover:text-primary-foreground/90'} ${isActive('/services') ? 'underline decoration-2 decoration-current underline-offset-4' : ''}`}
               >
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                {services.map((service) => (
-                    <Link
-                      key={service.path}
-                      to={service.path}
-                      className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-white transition-colors first:rounded-t-lg last:rounded-b-lg"
-                    >
-                      {service.name}
-                    </Link>
-                ))}
+                <span className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary rounded transition-opacity ${isActive('/services') ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} aria-hidden />
+              </Link>
+              <div className="absolute top-full right-0 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2">
+                <div className="w-max bg-card rounded shadow-lg overflow-hidden">
+                  <div className="p-6">
+                    {(() => {
+                      const cols = splitIntoColumns(services);
+                      const colCount = cols.length;
+                      return (
+                        <div className={`grid ${colCount === 1 ? 'grid-cols-1' : colCount === 2 ? 'grid-cols-2' : 'grid-cols-3'} gap-x-12`}>
+                          {cols.map((col, idx) => (
+                            <div key={idx} className="flex flex-col space-y-1">
+                              {col.map((service) => (
+                                <Link
+                                  key={service.path + service.name}
+                                  to={service.path}
+                                  className="block px-4 py-2 text-foreground hover:bg-secondary hover:text-white transition-colors rounded"
+                                >
+                                  {service.name}
+                                </Link>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Products Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={() => toggleDropdown("products")}
-                className="flex items-center space-x-1 text-muted-foreground hover:text-white transition-colors font-medium"
+            {/* Industries Dropdown */}
+            <div className="group relative h-full flex items-center">
+              <Link
+                to="/industries"
+                className={`relative flex items-center space-x-1 transition-colors font-medium ${isScrolled ? 'text-muted-foreground hover:text-white' : 'text-primary-foreground hover:text-primary-foreground/90'} ${isActive('/industries') ? 'underline decoration-2 decoration-current underline-offset-4' : ''}`}
               >
-                <span>Products</span>
+                <span>Industries</span>
                 <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                {products.map((product) => (
-                    <Link
-                      key={product.path}
-                      to={product.path}
-                      className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-white transition-colors first:rounded-t-lg last:rounded-b-lg"
-                    >
-                      {product.name}
-                    </Link>
-                ))}
+                <span className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary rounded transition-opacity ${isActive('/industries') ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} aria-hidden />
+              </Link>
+              <div className="absolute top-full right-0 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2">
+                <div className="w-max bg-card rounded shadow-lg overflow-hidden">
+                  <div className="p-6">
+                    {(() => {
+                      const cols = splitIntoColumns(industries);
+                      const colCount = cols.length;
+                      return (
+                        <div className={`grid ${colCount === 1 ? 'grid-cols-1' : colCount === 2 ? 'grid-cols-2' : 'grid-cols-3'} gap-x-12`}>
+                          {cols.map((col, idx) => (
+                            <div key={idx} className="flex flex-col space-y-1">
+                              {col.map((ind) => (
+                                <Link key={ind.path + ind.name} to={ind.path} className="block px-4 py-2 text-foreground hover:bg-secondary hover:text-white transition-colors rounded">{ind.name}</Link>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Insights Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={() => toggleDropdown("insights")}
-                className="flex items-center space-x-1 text-muted-foreground hover:text-white transition-colors font-medium"
+            {/* Company Dropdown */}
+            <div className="group relative h-full flex items-center">
+              <Link
+                to="/about"
+                className={`relative flex items-center space-x-1 transition-colors font-medium ${isScrolled ? 'text-muted-foreground hover:text-white' : 'text-primary-foreground hover:text-primary-foreground/90'} ${isActive('/about') ? 'underline decoration-2 decoration-current underline-offset-4' : ''}`}
               >
-                <span>Insights</span>
+                <span>Company</span>
                 <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                {insights.map((insight) => (
-                  <Link
-                    key={insight.path}
-                    to={insight.path}
-                    className="block px-4 py-3 text-foreground hover:bg-secondary hover:text-white transition-colors first:rounded-t-lg last:rounded-b-lg"
-                  >
-                    {insight.name}
-                  </Link>
-                ))}
+                <span className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary rounded transition-opacity ${isActive('/about') ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} aria-hidden />
+              </Link>
+              <div className="absolute top-full right-0 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pt-2">
+                <div className="w-max bg-card rounded shadow-lg overflow-hidden">
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-y-2">
+                      {company.map((item) => (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="block px-4 py-2 text-foreground hover:bg-secondary hover:text-white transition-colors rounded"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <Link to="/contact" className="text-muted-foreground hover:text-white transition-colors font-medium">Contact Us</Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-muted-foreground hover:text-white transition-colors"
+            className={`lg:hidden p-2 transition-colors ${isScrolled ? 'text-muted-foreground hover:text-white' : 'text-primary-foreground hover:text-primary-foreground/90'}`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -143,10 +253,25 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 bg-primary border-t border-border animate-fade-in">
+          <div className="lg:hidden py-4 bg-primary border-t border-border animate-fade-in max-h-[calc(100vh_-_5rem)] overflow-y-auto">
             <div className="flex flex-col space-y-4">
-              <Link to="/" className="px-4 py-2 text-muted-foreground hover:text-white transition-colors">Home</Link>
-              <Link to="/about" className="px-4 py-2 text-muted-foreground hover:text-white transition-colors">About Us</Link>
+              {/* Mobile Solutions Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown("solutions")}
+                  className="w-full flex items-center justify-between px-4 py-2 text-muted-foreground hover:text-white transition-colors"
+                >
+                  <span>Solutions</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "solutions" ? "rotate-180" : ""}`} />
+                </button>
+                {openDropdown === "solutions" && (
+                  <div className="pl-8 space-y-2 mt-2 animate-fade-in">
+                    {solutions.map((product) => (
+                      <Link key={product.path} to={product.path} className="block px-4 py-2 text-muted-foreground hover:text-white transition-colors">{product.name}</Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* Mobile Services Dropdown */}
               <div>
@@ -166,43 +291,41 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* Mobile Products Dropdown */}
+              {/* Mobile Industries Dropdown */}
               <div>
                 <button
-                  onClick={() => toggleDropdown("products")}
+                  onClick={() => toggleDropdown("industries")}
                   className="w-full flex items-center justify-between px-4 py-2 text-muted-foreground hover:text-white transition-colors"
                 >
-                  <span>Products</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "products" ? "rotate-180" : ""}`} />
+                  <span>Industries</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "industries" ? "rotate-180" : ""}`} />
                 </button>
-                {openDropdown === "products" && (
+                {openDropdown === "industries" && (
                   <div className="pl-8 space-y-2 mt-2 animate-fade-in">
-                    {products.map((product) => (
-                      <Link key={product.path} to={product.path} className="block px-4 py-2 text-muted-foreground hover:text-white transition-colors">{product.name}</Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Insights Dropdown */}
-              <div>
-                <button
-                  onClick={() => toggleDropdown("insights")}
-                  className="w-full flex items-center justify-between px-4 py-2 text-muted-foreground hover:text-white transition-colors"
-                >
-                  <span>Insights</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "insights" ? "rotate-180" : ""}`} />
-                </button>
-                {openDropdown === "insights" && (
-                  <div className="pl-8 space-y-2 mt-2 animate-fade-in">
-                    {insights.map((insight) => (
+                    {industries.map((insight) => (
                       <Link key={insight.path} to={insight.path} className="block px-4 py-2 text-muted-foreground hover:text-white transition-colors">{insight.name}</Link>
                     ))}
                   </div>
                 )}
               </div>
 
-              <Link to="/contact" className="px-4 py-2 text-muted-foreground hover:text-white transition-colors">Contact Us</Link>
+              {/* Mobile Company Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown("company")}
+                  className="w-full flex items-center justify-between px-4 py-2 text-muted-foreground hover:text-white transition-colors"
+                >
+                  <span>Company</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "company" ? "rotate-180" : ""}`} />
+                </button>
+                {openDropdown === "company" && (
+                  <div className="pl-8 space-y-2 mt-2 animate-fade-in">
+                    {company.map((item) => (
+                      <Link key={item.path} to={item.path} className="block px-4 py-2 text-muted-foreground hover:text-white transition-colors">{item.name}</Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}

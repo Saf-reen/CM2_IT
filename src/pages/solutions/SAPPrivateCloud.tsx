@@ -2,6 +2,7 @@ import { Check, Users, BarChart, MessageCircle, TrendingUp } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import HeroSection from "@/components/HeroSection";
 
 const CRM = () => {
   const features = [
@@ -18,14 +19,10 @@ const CRM = () => {
   return (
     <div className="min-h-screen animate-fade-in">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center text-center bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
-        <div className="container mx-auto px-4 z-10 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">CRM Solution</h1>
-          <p className="text-xl md:text-2xl opacity-90">
-            Streamline customer relationships and boost sales
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="CRM Solution"
+        subtitle="Streamline customer relationships and boost sales"
+      />
 
       {/* Main Content */}
       <section className="py-20 bg-background">

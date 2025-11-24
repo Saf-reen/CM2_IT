@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Building2, TrendingUp, Award } from "lucide-react";
+import HeroSection from "@/components/HeroSection";
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -34,14 +35,10 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen animate-fade-in">
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center text-center bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
-        <div className="container mx-auto px-4 z-10 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Case Studies</h1>
-          <p className="text-xl md:text-2xl opacity-90">
-            Real success stories from our clients
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Case Studies"
+        subtitle="Real success stories from our clients"
+      />
 
       {/* Case Studies List */}
       <section className="py-20 bg-background">
@@ -57,7 +54,7 @@ const CaseStudies = () => {
                     <div className="flex-1">
                       <h2 className="text-3xl font-bold text-primary mb-2">{study.title}</h2>
                       <p className="text-lg text-muted-foreground mb-6">{study.client}</p>
-                      
+
                       <div className="grid md:grid-cols-3 gap-6">
                         <div>
                           <h3 className="font-semibold text-primary mb-2">Challenge</h3>
