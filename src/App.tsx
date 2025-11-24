@@ -21,7 +21,7 @@ import Blog from "./pages/industries/BankFinance.tsx";
 import News from "./pages/industries/Energy.tsx";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import RiseWithSap from "./pages/solutions/risewithsap.tsx";
+import RiseWithSap from "./pages/solutions/RiseWithSap.tsx";
 
 const queryClient = new QueryClient();
 
