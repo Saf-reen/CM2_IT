@@ -185,7 +185,7 @@ const Navbar = () => {
                 to="/industries"
                 className={`relative flex items-center space-x-1 transition-colors font-medium ${isScrolled ? 'text-muted-foreground hover:text-white' : 'text-primary-foreground hover:text-primary-foreground/90'} ${isActive('/industries') ? 'underline decoration-2 decoration-current underline-offset-4' : ''}`}
               >
-                <span>Industries</span>
+                <span>Industries </span>
                 <ChevronDown className="w-4 h-4" />
                 <span className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary rounded transition-opacity ${isActive('/industries') ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} aria-hidden />
               </Link>
