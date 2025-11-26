@@ -23,47 +23,47 @@ const Navbar = () => {
   }, [location]);
 
   const services = [
-    { name: "Implementation", path: "/services/web-design" },
-    { name: "Migrations", path: "/services/app-design" },
-    { name: "Application Development", path: "/services/software-development" },
-    { name: "Integration", path: "/services/cloud-solutions" },
-    { name: "Rollouts", path: "/services/web-design" },
-    { name: "Upgrades", path: "/services/app-design" },
-    { name: "Support & Maintenance", path: "/services/software-development" },
-    { name: "Testing", path: "/services/cloud-solutions" },
-    { name: "Training", path: "/services/cloud-solutions" },
+    { name: "Implementation", path: "/services/implementation" },
+    { name: "Migrations", path: "/services/migration" },
+    { name: "Application Development", path: "/services/development" },
+    { name: "Integration", path: "/services/integration" },
+    { name: "Rollouts", path: "/services/rollouts" },
+    { name: "Upgrades", path: "/services/upgrades" },
+    { name: "Support & Maintenance", path: "/services/support" },
+    { name: "Testing", path: "/services/testing" },
+    { name: "Training", path: "/services/training" },
   ];
 
   const solutions = [
     { name: "Rise with SAP", path: "/solutions/rise-with-sap" },
-    { name: "SAP S/4 HANA Private Cloud", path: "/solutions/erp" },
-    { name: "SAP S/4 HANA Public Cloud", path: "/solutions/hrms" },
-    { name: "SAP Success Factors", path: "/solutions/crm" },
-    { name: "SAP Commerce Cloud", path: "/solutions/erp" },
-    { name: "SAP Concur", path: "/solutions/hrms" },
-    { name: "SAP Ariba", path: "/solutions/crm" },
-    { name: "SAP Manufacturing Execution", path: "/solutions/erp" },
-    { name: "SAP Manufacturing Logistics", path: "/solutions/hrms" },
-    { name: "SAP Digital Manufacturing", path: "/solutions/crm" },
-    { name: "SAP Business Network for Logistics", path: "/solutions/erp" },
-    { name: "SAP Fieldglass", path: "/solutions/hrms" },
-    { name: "SAP Extended Warehouse Management", path: "/solutions/crm" },
-    { name: "SAP Product Lifecycle", path: "/solutions/erp" },
-    { name: "SAP Asset Performance Management", path: "/solutions/hrms" },
-    { name: "SAP Field Service Management", path: "/solutions/crm" },
+    { name: "SAP S/4 HANA Private Cloud", path: "/solutions/sap-privatecloud" },
+    { name: "SAP S/4 HANA Public Cloud", path: "/solutions/sap-publiccloud" },
+    { name: "SAP Success Factors", path: "/solutions/success-factors" },
+    { name: "SAP Commerce Cloud", path: "/solutions/commercecloud" },
+    { name: "SAP Concur", path: "/solutions/concur" },
+    { name: "SAP Ariba", path: "/solutions/ariba" },
+    { name: "SAP Manufacturing Execution", path: "/solutions/manufacturingexecution" },
+    { name: "SAP Manufacturing Logistics", path: "/solutions/manufacturinglogistics" },
+    { name: "SAP Digital Manufacturing", path: "/solutions/digitalmanufacturing" },
+    { name: "SAP Business Network for Logistics", path: "/solutions/businessnetwork" },
+    { name: "SAP Fieldglass", path: "/solutions/fieldglass" },
+    { name: "SAP Extended Warehouse Management", path: "/solutions/warehouse" },
+    { name: "SAP Product Lifecycle", path: "/solutions/productlifecycle" },
+    { name: "SAP Asset Performance Management", path: "/solutions/assetperformance" },
+    { name: "SAP Field Service Management", path: "/solutions/fieldservice" },
   ];
 
   const industries = [
-    { name: "Banking & Finance", path: "/industries/case-studies" },
-    { name: "Public Sector", path: "/industries/blog" },
-    { name: "Energy & Utilities", path: "/industries/news" },
-    { name: "Healthcare", path: "/industries/case-studies" },
-    { name: "Dairy", path: "/industries/blog" },
-    { name: "Textile", path: "/industries/news" },
-    { name: "Manufacturing", path: "/industries/case-studies" },
-    { name: "Retail", path: "/industries/blog" },
-    { name: "Travel", path: "/industries/news" },
-    { name: "Telecom", path: "/industries/case-studies" },
+    { name: "Banking & Finance", path: "/industries/banking-finance" },
+    { name: "Public Sector", path: "/industries/public-sector" },
+    { name: "Energy & Utilities", path: "/industries/energy" },
+    { name: "Healthcare", path: "/industries/healthcare" },
+    { name: "Dairy", path: "/industries/dairy" },
+    { name: "Textile", path: "/industries/textile" },
+    { name: "Manufacturing", path: "/industries/manufacturing" },
+    { name: "Retail", path: "/industries/retail" },
+    { name: "Travel", path: "/industries/travel" },
+    { name: "Telecom", path: "/industries/telecom" },
   ];
 
   const company = [
@@ -75,6 +75,11 @@ const Navbar = () => {
 
   const toggleDropdown = (dropdown: string) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setOpenDropdown(null);
   };
 
   // split array into columns where first column has 6 items and subsequent columns have up to 5 items
@@ -124,11 +129,11 @@ const Navbar = () => {
                       const cols = splitIntoColumns(solutions);
                       const colCount = cols.length;
                       return (
-                        <div className={`grid ${colCount === 1 ? 'grid-cols-1' : colCount === 2 ? 'grid-cols-2' : 'grid-cols-3'} gap-x-12`}>
+                        <div className={`grid ${colCount === 1 ? 'grid-cols-1' : colCount === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
                           {cols.map((col, idx) => (
                             <div key={idx} className="flex flex-col space-y-1">
                               {col.map((s) => (
-                                <Link key={s.path + s.name} to={s.path} className="block px-4 py-2 text-foreground hover:bg-secondary hover:text-white transition-colors rounded">{s.name}</Link>
+                                <Link key={s.path + s.name} to={s.path} className="block py-2 text-foreground hover:bg-secondary hover:text-white transition-colors rounded">{s.name}</Link>
                               ))}
                             </div>
                           ))}
@@ -259,7 +264,7 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={() => toggleDropdown("solutions")}
-                  className="w-full flex items-center justify-between px-4 py-2 text-muted-foreground hover:text-white transition-colors"
+                  className={`w-full flex items-center justify-between px-4 py-2 transition-colors font-medium ${isActive('/services') ? 'text-white bg-white/10' : 'text-muted-foreground hover:text-white'}`}
                 >
                   <span>Solutions</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === "solutions" ? "rotate-180" : ""}`} />
@@ -267,7 +272,14 @@ const Navbar = () => {
                 {openDropdown === "solutions" && (
                   <div className="pl-8 space-y-2 mt-2 animate-fade-in">
                     {solutions.map((product) => (
-                      <Link key={product.path} to={product.path} className="block px-4 py-2 text-muted-foreground hover:text-white transition-colors">{product.name}</Link>
+                      <Link
+                        key={product.path}
+                        to={product.path}
+                        onClick={closeMobileMenu}
+                        className={`block px-4 py-2 transition-colors rounded ${isActive(product.path) ? 'text-white bg-white/10 font-medium' : 'text-muted-foreground hover:text-white'}`}
+                      >
+                        {product.name}
+                      </Link>
                     ))}
                   </div>
                 )}

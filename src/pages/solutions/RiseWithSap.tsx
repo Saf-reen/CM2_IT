@@ -18,27 +18,86 @@ import {
     Activity,
     Cpu,
     Network,
-    Zap
+    Zap,
+    Check,
 } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import HeroSection from "@/components/HeroSection";
-import { motion } from "framer-motion";
+import { motion,useReducedMotion } from "framer-motion";
+
 
 const RiseWithSap = () => {
+    const shouldReduceMotion = useReducedMotion()
     const [servicesRef] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
-
+      const implementationSteps = [
+        {
+            title: "Advisory & Assessment Services",
+            bullets: [
+                "Readiness checks and current landscape analysis",
+                "Total cost of ownership (TCO) evaluation",
+                "Cloud vs on-premise decision consulting",
+            ],
+        },
+        {
+            title: "RISE with SAP Planning & Roadmapping",
+            bullets: [
+                "Business transformation planning",
+                "Migration strategy and cloud architecture design",
+                "Value-driven transformation roadmaps",
+            ],
+        },
+        {
+            title: "Implementation Services",
+            bullets: [
+                "SAP S/4HANA Cloud deployment (public/private)",
+                "Data migration using SAP tools (e.g., SAP Data Migration Cockpit)",
+                "Process redesign using Signavio and BPI tools",
+            ],
+        },
+        {
+            title: "Integration Services",
+            bullets: [
+                "Integration with third-party systems via SAP Integration Suite",
+                "Custom extensions using SAP BTP",
+            ],
+        },
+        {
+            title: "Change Management & Training",
+            bullets: [
+                "End-user training and enablement",
+                "Organizational change management",
+                "Business role redesign and testing support",
+            ],
+        },
+        {
+            title: "Support & Optimization",
+            bullets: [
+                "Post-go-live support)",
+                "Continuous innovation and optimization using BTP",
+                "Managed services and application support",
+            ],
+        },
+        {
+            title: "RISE Migration Factory",
+            bullets: [
+                "Factory model for mass migration (suitable for large clients or multiple subsidiaries)",
+                "Repeatable and scalable migration templates",
+            ],
+        },
+        
+    ];
     const trustFactors = [
         { title: "End-to-End SAP Services", icon: Layers, desc: "From planning to execution, we cover every aspect of your SAP journey." },
         { title: "Industry Expertise", icon: Briefcase, desc: "Deep knowledge across various sectors to tailor solutions for your specific needs." },
         { title: "Certified SAP Professionals", icon: Award, desc: "A team of highly skilled and certified experts dedicated to your success." },
-        { title: "Rapid Deployment", icon: Rocket, desc: "Accelerated implementation methodologies to get you up and running faster." },
+        { title: "Rapid Deployment & Methodologies", icon: Rocket, desc: "Accelerated implementation methodologies to get you up and running faster." },
         { title: "Cloud & On-Prem Expertise", icon: Cloud, desc: "Seamless integration and management of hybrid environments." },
         { title: "Innovation-Driven", icon: Lightbulb, desc: "Leveraging the latest technologies to drive continuous improvement." },
         { title: "Global Delivery Model", icon: Globe, desc: "Flexible delivery options ensuring 24/7 support and execution." },
-        { title: "Change Management", icon: Users, desc: "Guiding your team through transitions for smooth adoption." },
-        { title: "Value Realization", icon: TrendingUp, desc: "Focusing on tangible business outcomes and ROI." },
-        { title: "License Advisory", icon: Target, desc: "Optimizing your licensing structure for cost-efficiency." },
+        { title: "Change Management & Training", icon: Users, desc: "Guiding your team through transitions for smooth adoption." },
+        { title: "Value Realization & Continuous Improvement", icon: TrendingUp, desc: "Focusing on tangible business outcomes and ROI." },
+        { title: "License Advisory & Optimization", icon: Target, desc: "Optimizing your licensing structure for cost-efficiency." },
         { title: "Security & Compliance", icon: Lock, desc: "Ensuring your data is secure and compliant with industry standards." },
     ];
 
@@ -67,9 +126,9 @@ const RiseWithSap = () => {
         "Testing"
     ];
 
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
+   const fadeInUp = {
+        hidden: shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 30 },
+        visible: shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
     };
 
     const staggerContainer = {
@@ -81,6 +140,24 @@ const RiseWithSap = () => {
             }
         }
     };
+
+      const slideIn = (direction) => ({
+        hidden: shouldReduceMotion 
+            ? { opacity: 0 }
+            : {
+                opacity: 0,
+                x: direction === "left" ? -36 : 36,
+                scale: 0.995,
+            },
+        visible: shouldReduceMotion
+            ? { opacity: 1 }
+            : {
+                opacity: 1,
+                x: 0,
+                scale: 1,
+                transition: { duration: 0.6, ease: "easeOut" },
+            },
+    });
 
     return (
         <div className="min-h-screen bg-background overflow-x-hidden">
@@ -162,6 +239,40 @@ const RiseWithSap = () => {
                     </motion.h2>
                 </div>
             </section>
+
+                <section className="pb-20 bg-gradient-to-r from-slate-50 via-blue-50/50 to-slate-50">
+                            <div className="container mx-auto px-4 max-w-7xl">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    {implementationSteps.map((step, index) => {
+                                        const direction = index % 2 === 0 ? "left" : "right";
+                                        
+                                        return (
+                                            <motion.div
+                                                key={index}
+                                                initial="hidden"
+                                                whileInView="visible"
+                                                viewport={{ once: true, amount: 0.1 }}
+                                                variants={slideIn(direction)} // Staggered slide-in animation
+                                                className="p-6 rounded-xl bg-white/90 shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col"
+                                            >
+                                                <h3 className="font-bold text-lg text-primary mb-3 flex items-center">
+                                                    <Layers className="w-5 h-5 text-secondary mr-2 flex-shrink-0" />
+                                                    {step.title}
+                                                </h3>
+                                                <ul className="list-inside text-gray-600 space-y-2 mt-2 flex-grow">
+                                                    {step.bullets.map((bullet, bIndex) => (
+                                                        <li key={bIndex} className="flex items-start text-sm">
+                                                            <Check className="w-4 h-4 text-blue-500 mr-2 mt-1 flex-shrink-0" />
+                                                            {bullet}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </motion.div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </section>
 
             {/* 3. SERVICES CAROUSEL */}
             <section className="py-20 bg-white">

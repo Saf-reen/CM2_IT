@@ -26,105 +26,83 @@ import Autoplay from "embla-carousel-autoplay";
 import HeroSection from "@/components/HeroSection";
 import { motion,useReducedMotion } from "framer-motion";
 
-const Arbia = () => {
+
+const ManufacturingLogistics = () => {
     const shouldReduceMotion = useReducedMotion()
     const [servicesRef] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
 
     const implementationSteps = [
         {
-            title: "Assessment & Strategy",
+            title: "Inbound Logistics",
             bullets: [
-                "Business case development",
-                "Spend analysis and opportunity assessment",
+                "Use of SAP Ariba, EDI, or IDocs for ASN (Advanced Shipping Notification)",
+                "Automated GR via SAP Extended Warehouse Management (EWM) or SAP S/4HANA MM",
+                "QM inspection lots integration for raw materials",
+                "Bin determination using EWM putaway rules",
+                "Real-time stock updates and traceability",
             ],
         },
         {
-            title: "Solution Design & Configuration",
+            title: "Internal Logistics & Production Integration",
             bullets: [
-                "Guided buying setup",
-                "Catalog management",
-                "Integration with ERP systems (e.g., SAP S/4HANA, ECC)",
+                "Integration between SAP PP and SAP EWM / WM",
+                "Kitting, Kanban, and JIT/JIS processes",
+                "EWM delivery-based staging or production supply areas (PSA)",
+                "Real-time updates via RF devices, Fiori apps, or SAP MII",
+                "Batch & serial number tracking",
             ],
         },
         {
-            title: "Implementation",
+            title: "Outbound Logistics",
             bullets: [
-                "Ariba Buying & Invoicing",
-                "Ariba Sourcing",
-                "Ariba Contracts",
-                "Ariba Supplier Lifecycle and Performance (SLP)",
-                "Ariba Spend Analysis",
+                "Production order confirmation and automatic goods receipt",
+                "Integration with packing and labeling solutions",
+                "SAP TM (Transportation Management) for route and freight planning",
+                "Delivery creation, picking, packing, and loading with EWM",
+                "ASN, Proof of Delivery (POD), and real-time shipment tracking",
             ],
         },
         {
-            title: "Testing & Deployment",
+            title: "Warehouse Management (EWM / Stock Room Mgmt)",
             bullets: [
-                "User acceptance testing (UAT)",
-                "Cutover and go-live support",
+                "Layout-oriented storage control, wave management",
+                "RF framework, Fiori-based warehouse apps",
+                "MFS (Material Flow System) integration with conveyors/AGVs",
             ],
         },
         {
-            title: "Integration Services",
+            title: "Manufacturing Execution Integration",
             bullets: [
-                "SAP S/4HANA (via CIG or middleware like SAP CPI)",
-                "Master data and transactional data synchronization",
-                "Tax engines (e.g., Vertex, Avalara)",
-                "Payment gateways",
-            ],
-        },
-        {
-            title: "Support & Managed Services",
-            bullets: [
-                "Post-go-live support",
-                "Supplier onboarding and enablement",
-                "System performance monitoring",
-                "Troubleshooting and issue resolution",
-                "Regular release management and updates",
-            ],
-        },
-        {
-            title: "Procurement Process Optimization",
-            bullets: [
-                "Workflow automation and approval optimization",
-                "Tail-spend management strategies",
-                "Category-specific sourcing best practices",
-                "Contract compliance monitoring",
-            ],
-        },
-        {
-            title: "Supplier Enablement Services",
-            bullets: [
-                "Supplier training and onboarding (for Ariba Network)",
-                "Communication templates and campaigns",
-                "Monitoring supplier connectivity and engagement",
-            ],
-        },
-        {
-            title: "Training & Change Management",
-            bullets: [
-                "End-user and admin training",
-                "Creation of training materials (SOPs, quick guides, videos)",
-                "Change impact assessments",
+                "Real-time production and logistics data exchange",
+                "Paperless shop floor with track & trace",
             ],
         },
         {
             title: "Analytics and Reporting",
             bullets: [
-                "Custom dashboards and KPI tracking",
-                "Spend visibility analysis",
-                "Supplier performance metrics",
+                "Inventory, warehouse performance, and logistics KPIs",
+                "Custom dashboards for logistics and manufacturing insights",
             ],
         },
+        {
+            title: "S/4HANA-Specific Capabilities",
+            bullets: [
+                "Real-time inventory availability for production and shipping",
+                "Seamless integration in a single system",
+                "Simplified, role-based access to logistics transactions",
+            ],
+        },
+        
     ];
     const trustFactors = [
         { title: "End-to-End SAP Services", icon: Layers, desc: "From planning to execution, we cover every aspect of your SAP journey." },
         { title: "Industry Expertise", icon: Briefcase, desc: "Deep knowledge across various sectors to tailor solutions for your specific needs." },
         { title: "Certified SAP Professionals", icon: Award, desc: "A team of highly skilled and certified experts dedicated to your success." },
-        { title: "Rapid Deployment & Methodologies ", icon: Rocket, desc: "Accelerated implementation methodologies to get you up and running faster." },
+        { title: "Rapid Deployment & Methodologies", icon: Rocket, desc: "Accelerated implementation methodologies to get you up and running faster." },
         { title: "Cloud & On-Prem Expertise", icon: Cloud, desc: "Seamless integration and management of hybrid environments." },
         { title: "Innovation-Driven", icon: Lightbulb, desc: "Leveraging the latest technologies to drive continuous improvement." },
         { title: "Global Delivery Model", icon: Globe, desc: "Flexible delivery options ensuring 24/7 support and execution." },
-        { title: "Change Management  & Training", icon: Users, desc: "Guiding your team through transitions for smooth adoption." },
+        { title: "Change Management & Training", icon: Users, desc: "Guiding your team through transitions for smooth adoption." },
         { title: "Value Realization & Continuous Improvement", icon: TrendingUp, desc: "Focusing on tangible business outcomes and ROI." },
         { title: "License Advisory & Optimization", icon: Target, desc: "Optimizing your licensing structure for cost-efficiency." },
         { title: "Security & Compliance", icon: Lock, desc: "Ensuring your data is secure and compliant with industry standards." },
@@ -193,8 +171,8 @@ const Arbia = () => {
         <div className="min-h-screen bg-background overflow-x-hidden">
          {/* 1. HERO SECTION */}
           <HeroSection
-            title="Smarter, Connected Procurement with SAP Ariba"
-            subtitle="Streamline purchasing and strengthen supplier collaboration with intelligent cloud procurement."
+            title="Streamline Manufacturing & Logistics with SAP"
+            subtitle="Enable efficient production and seamless supply chain operations with integrated SAP solutions."
             />
 
 
@@ -397,7 +375,7 @@ const Arbia = () => {
     );
 };
 
-export default Arbia;
+export default ManufacturingLogistics;
 
 
 

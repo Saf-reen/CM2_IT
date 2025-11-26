@@ -5,11 +5,36 @@ interface HeroSectionProps {
     subtitle?: React.ReactNode;
     children?: React.ReactNode;
     className?: string;
+    backgroundImage?: string;
+    height?: 'h-60' | 'default';
 }
 
-const HeroSection = ({ title, subtitle, children, className = "" }: HeroSectionProps) => {
+const HeroSection = ({
+    title,
+    subtitle,
+    children,
+    className = "",
+    backgroundImage,
+    height = 'default'
+}: HeroSectionProps) => {
+    const heightClass = 'min-h-[60vh] md:min-h-[80vh]';
+
     return (
-        <section className={`relative min-h-[60vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-slate-900 ${className}`}>
+        <section className={`relative ${heightClass} flex items-center justify-center overflow-hidden ${className}`}>
+            {/* Background Image with Overlay */}
+            {backgroundImage ? (
+                <div className="absolute inset-0">
+                    <img
+                        src={backgroundImage}
+                        alt="Hero background"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-slate-900/90" />
+                </div>
+            ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-slate-900" />
+            )}
+
             {/* Animated Background Pattern */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent animate-pulse" />
@@ -24,18 +49,18 @@ const HeroSection = ({ title, subtitle, children, className = "" }: HeroSectionP
                 <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-secondary/30 rounded-lg rotate-12 animate-float" />
             </div>
 
-            <div className="container mx-auto px-4 relative z-10 text-center pt-32 pb-20">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
+            <div className="container mx-auto px-4 relative z-10 text-center py-8">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight animate-fade-in-up">
                     {title}
                 </h1>
 
                 {subtitle && (
-                    <div className="text-xl text-white/80 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-100">
+                    <div className="text-lg md:text-xl text-white/80 mb-6 md:mb-8 max-w-3xl mx-auto animate-fade-in-up delay-100">
                         {subtitle}
                     </div>
                 )}
 
-                <div className="w-24 h-1 bg-secondary mx-auto mb-8 animate-scale-in" />
+                <div className="w-24 h-1 bg-secondary mx-auto mb-6 md:mb-8 animate-scale-in" />
 
                 {children && (
                     <div className="animate-fade-in-up delay-200">

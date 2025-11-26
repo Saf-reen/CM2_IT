@@ -7,6 +7,7 @@ import hero2 from "@/assets/hero-2.png";
 import hero3 from "@/assets/hero-3.png";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, fadeIn, scaleIn } from "@/utils/animations";
+import CTASection from "@/components/CTASection";
 
 const Home = () => {
   // Hero Carousel
@@ -250,27 +251,7 @@ const Home = () => {
       </section>
 
       {/* 5. CTA SECTION */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-slate-900" />
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent animate-pulse" />
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">Ready to Grow Your Business?</h2>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-white text-primary text-lg font-bold rounded-full hover:bg-secondary hover:text-primary transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.3)]"
-            >
-              Contact Us
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
+      <CTASection />
 
       {/* 6. TRANSFORMATION STATEMENT */}
       <section className="py-24 bg-slate-50">

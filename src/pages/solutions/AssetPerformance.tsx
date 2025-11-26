@@ -26,93 +26,57 @@ import Autoplay from "embla-carousel-autoplay";
 import HeroSection from "@/components/HeroSection";
 import { motion,useReducedMotion } from "framer-motion";
 
-const Arbia = () => {
+const AssetPerformance = () => {
     const shouldReduceMotion = useReducedMotion()
     const [servicesRef] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
 
     const implementationSteps = [
         {
-            title: "Assessment & Strategy",
+            title: "APM Strategy & Roadmap",
             bullets: [
-                "Business case development",
-                "Spend analysis and opportunity assessment",
+                "Assess current asset management maturity",
+                "Define business goals and KPIs",
+                "Develop a phased SAP APM rollout plan",
             ],
         },
         {
-            title: "Solution Design & Configuration",
+            title: "Implementation & Integration",
             bullets: [
-                "Guided buying setup",
-                "Catalog management",
-                "Integration with ERP systems (e.g., SAP S/4HANA, ECC)",
+                "Configure SAP APM modules (Asset Strategy, Risk & Criticality, Predictive Maintenance, Reliability-Centered Maintenance, Failure Mode Management)",
+                "Integrate with SAP EAM/Plant Maintenance and IoT platforms",
+                "Set up data models and connectivity to sensors, historians, and external systems",
             ],
         },
         {
-            title: "Implementation",
+            title: "Data Preparation & Governance",
             bullets: [
-                "Ariba Buying & Invoicing",
-                "Ariba Sourcing",
-                "Ariba Contracts",
-                "Ariba Supplier Lifecycle and Performance (SLP)",
-                "Ariba Spend Analysis",
+                "Cleanse and structure asset master data",
+                "Develop equipment hierarchy and criticality assessments",
+                "Establish governance processes for continuous data qualityand legacy systems",
             ],
         },
         {
-            title: "Testing & Deployment",
+            title: "Predictive Analytics & Insights",
             bullets: [
-                "User acceptance testing (UAT)",
-                "Cutover and go-live support",
+                "Build predictive models for failure detection and performance optimization",
+                "Use machine learning and AI to generate actionable recommendations",
+                "Develop dashboards and reports for real-time insights",
             ],
         },
         {
-            title: "Integration Services",
+            title: "Change Management & User Enablement",
             bullets: [
-                "SAP S/4HANA (via CIG or middleware like SAP CPI)",
-                "Master data and transactional data synchronization",
-                "Tax engines (e.g., Vertex, Avalara)",
-                "Payment gateways",
+                "Conduct stakeholder engagement and training",
+                "Build user adoption plans and communication strategies",
+                "Provide role-based training for planners, reliability engineers, and maintenance teams",
             ],
         },
         {
-            title: "Support & Managed Services",
+            title: "Support & Continuous Improvement",
             bullets: [
-                "Post-go-live support",
-                "Supplier onboarding and enablement",
-                "System performance monitoring",
-                "Troubleshooting and issue resolution",
-                "Regular release management and updates",
-            ],
-        },
-        {
-            title: "Procurement Process Optimization",
-            bullets: [
-                "Workflow automation and approval optimization",
-                "Tail-spend management strategies",
-                "Category-specific sourcing best practices",
-                "Contract compliance monitoring",
-            ],
-        },
-        {
-            title: "Supplier Enablement Services",
-            bullets: [
-                "Supplier training and onboarding (for Ariba Network)",
-                "Communication templates and campaigns",
-                "Monitoring supplier connectivity and engagement",
-            ],
-        },
-        {
-            title: "Training & Change Management",
-            bullets: [
-                "End-user and admin training",
-                "Creation of training materials (SOPs, quick guides, videos)",
-                "Change impact assessments",
-            ],
-        },
-        {
-            title: "Analytics and Reporting",
-            bullets: [
-                "Custom dashboards and KPI tracking",
-                "Spend visibility analysis",
-                "Supplier performance metrics",
+                "Provide hypercare and post-go-live support",
+                "Conduct periodic performance reviews",
+                "Continuously refine asset strategies based on evolving business needs",
             ],
         },
     ];
@@ -120,11 +84,11 @@ const Arbia = () => {
         { title: "End-to-End SAP Services", icon: Layers, desc: "From planning to execution, we cover every aspect of your SAP journey." },
         { title: "Industry Expertise", icon: Briefcase, desc: "Deep knowledge across various sectors to tailor solutions for your specific needs." },
         { title: "Certified SAP Professionals", icon: Award, desc: "A team of highly skilled and certified experts dedicated to your success." },
-        { title: "Rapid Deployment & Methodologies ", icon: Rocket, desc: "Accelerated implementation methodologies to get you up and running faster." },
+        { title: "Rapid Deployment & Methodologies", icon: Rocket, desc: "Accelerated implementation methodologies to get you up and running faster." },
         { title: "Cloud & On-Prem Expertise", icon: Cloud, desc: "Seamless integration and management of hybrid environments." },
         { title: "Innovation-Driven", icon: Lightbulb, desc: "Leveraging the latest technologies to drive continuous improvement." },
         { title: "Global Delivery Model", icon: Globe, desc: "Flexible delivery options ensuring 24/7 support and execution." },
-        { title: "Change Management  & Training", icon: Users, desc: "Guiding your team through transitions for smooth adoption." },
+        { title: "Change Management & Training", icon: Users, desc: "Guiding your team through transitions for smooth adoption." },
         { title: "Value Realization & Continuous Improvement", icon: TrendingUp, desc: "Focusing on tangible business outcomes and ROI." },
         { title: "License Advisory & Optimization", icon: Target, desc: "Optimizing your licensing structure for cost-efficiency." },
         { title: "Security & Compliance", icon: Lock, desc: "Ensuring your data is secure and compliant with industry standards." },
@@ -193,8 +157,8 @@ const Arbia = () => {
         <div className="min-h-screen bg-background overflow-x-hidden">
          {/* 1. HERO SECTION */}
           <HeroSection
-            title="Smarter, Connected Procurement with SAP Ariba"
-            subtitle="Streamline purchasing and strengthen supplier collaboration with intelligent cloud procurement."
+            title="Maximize Asset Reliability with SAP APM"
+            subtitle="Predict failures, improve maintenance, and boost operational performance with intelligent asset management."
             />
 
 
@@ -397,8 +361,5 @@ const Arbia = () => {
     );
 };
 
-export default Arbia;
-
-
-
+export default AssetPerformance;
  

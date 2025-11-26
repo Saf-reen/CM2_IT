@@ -26,105 +26,78 @@ import Autoplay from "embla-carousel-autoplay";
 import HeroSection from "@/components/HeroSection";
 import { motion,useReducedMotion } from "framer-motion";
 
-const Arbia = () => {
+const ManufacturingExecution = () => {
     const shouldReduceMotion = useReducedMotion()
     const [servicesRef] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
 
     const implementationSteps = [
         {
-            title: "Assessment & Strategy",
+            title: "SAP Digital Manufacturing (DM) for Execution (DMe)",
             bullets: [
-                "Business case development",
-                "Spend analysis and opportunity assessment",
+                "Real-time shop floor execution",
+                "Operator dashboards & UI",
+                "Production order tracking and execution",
+                "Quality inspection and defect recording",
+                "Integration with SAP S/4HANA and machines (IIoT)",
             ],
         },
         {
-            title: "Solution Design & Configuration",
+            title: "SAP Manufacturing Integration and Intelligence (MII)",
             bullets: [
-                "Guided buying setup",
-                "Catalog management",
-                "Integration with ERP systems (e.g., SAP S/4HANA, ECC)",
+                "Integration layer between shop floor and business systems",
+                "Real-time dashboards, KPIs, and data analytics",
+                "Custom UI and integration to plant equipment (PLC/SCADA)",
             ],
         },
         {
-            title: "Implementation",
+            title: "SAP Manufacturing Execution (ME)",
             bullets: [
-                "Ariba Buying & Invoicing",
-                "Ariba Sourcing",
-                "Ariba Contracts",
-                "Ariba Supplier Lifecycle and Performance (SLP)",
-                "Ariba Spend Analysis",
+                "Detailed production execution system)",
+                "Advanced capabilities like routing, WIP tracking, NC management",
+                "Often used in complex discrete manufacturing (e.g., aerospace, high tech)",
             ],
         },
         {
-            title: "Testing & Deployment",
+            title: "MES Strategy & Roadmap",
             bullets: [
-                "User acceptance testing (UAT)",
-                "Cutover and go-live support",
+                "Fit-gap analysis with current manufacturing systems",
+                "Roadmap for MES transformation (Greenfield/Brownfield)",
+            ],
+        },
+        {
+            title: "Implementation & Rollout",
+            bullets: [
+                "Configure and implement SAP DMe or ME",
+                "Integrate with SAP ERP (S/4HANA or ECC) and shop floor equipment",
+                "Plant-specific rollout and global template design",
             ],
         },
         {
             title: "Integration Services",
             bullets: [
-                "SAP S/4HANA (via CIG or middleware like SAP CPI)",
-                "Master data and transactional data synchronization",
-                "Tax engines (e.g., Vertex, Avalara)",
-                "Payment gateways",
+                "SAP PP, QM, PM modules",
+                "PLCs, SCADA, OPC UA interfaces",
+                "IoT platforms for predictive maintenance or quality",
             ],
         },
         {
-            title: "Support & Managed Services",
+            title: "Custom Development (MII/Build Apps)",
             bullets: [
-                "Post-go-live support",
-                "Supplier onboarding and enablement",
-                "System performance monitoring",
-                "Troubleshooting and issue resolution",
-                "Regular release management and updates",
+                "Build custom operator interfaces or mobile apps",
+                "Develop dashboards for production KPIs and OEE",
             ],
         },
-        {
-            title: "Procurement Process Optimization",
-            bullets: [
-                "Workflow automation and approval optimization",
-                "Tail-spend management strategies",
-                "Category-specific sourcing best practices",
-                "Contract compliance monitoring",
-            ],
-        },
-        {
-            title: "Supplier Enablement Services",
-            bullets: [
-                "Supplier training and onboarding (for Ariba Network)",
-                "Communication templates and campaigns",
-                "Monitoring supplier connectivity and engagement",
-            ],
-        },
-        {
-            title: "Training & Change Management",
-            bullets: [
-                "End-user and admin training",
-                "Creation of training materials (SOPs, quick guides, videos)",
-                "Change impact assessments",
-            ],
-        },
-        {
-            title: "Analytics and Reporting",
-            bullets: [
-                "Custom dashboards and KPI tracking",
-                "Spend visibility analysis",
-                "Supplier performance metrics",
-            ],
-        },
+       
     ];
     const trustFactors = [
         { title: "End-to-End SAP Services", icon: Layers, desc: "From planning to execution, we cover every aspect of your SAP journey." },
         { title: "Industry Expertise", icon: Briefcase, desc: "Deep knowledge across various sectors to tailor solutions for your specific needs." },
         { title: "Certified SAP Professionals", icon: Award, desc: "A team of highly skilled and certified experts dedicated to your success." },
-        { title: "Rapid Deployment & Methodologies ", icon: Rocket, desc: "Accelerated implementation methodologies to get you up and running faster." },
+        { title: "Rapid Deployment & Methodologies", icon: Rocket, desc: "Accelerated implementation methodologies to get you up and running faster." },
         { title: "Cloud & On-Prem Expertise", icon: Cloud, desc: "Seamless integration and management of hybrid environments." },
         { title: "Innovation-Driven", icon: Lightbulb, desc: "Leveraging the latest technologies to drive continuous improvement." },
         { title: "Global Delivery Model", icon: Globe, desc: "Flexible delivery options ensuring 24/7 support and execution." },
-        { title: "Change Management  & Training", icon: Users, desc: "Guiding your team through transitions for smooth adoption." },
+        { title: "Change Management & Training", icon: Users, desc: "Guiding your team through transitions for smooth adoption." },
         { title: "Value Realization & Continuous Improvement", icon: TrendingUp, desc: "Focusing on tangible business outcomes and ROI." },
         { title: "License Advisory & Optimization", icon: Target, desc: "Optimizing your licensing structure for cost-efficiency." },
         { title: "Security & Compliance", icon: Lock, desc: "Ensuring your data is secure and compliant with industry standards." },
@@ -193,8 +166,8 @@ const Arbia = () => {
         <div className="min-h-screen bg-background overflow-x-hidden">
          {/* 1. HERO SECTION */}
           <HeroSection
-            title="Smarter, Connected Procurement with SAP Ariba"
-            subtitle="Streamline purchasing and strengthen supplier collaboration with intelligent cloud procurement."
+            title="Optimize Shop Floor Operations with SAP ME"
+            subtitle="Enhance production efficiency, quality, and visibility with intelligent manufacturing execution."
             />
 
 
@@ -397,7 +370,7 @@ const Arbia = () => {
     );
 };
 
-export default Arbia;
+export default ManufacturingExecution;
 
 
 
