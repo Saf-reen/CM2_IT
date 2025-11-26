@@ -157,6 +157,7 @@ const BusinessNetwork = () => {
           <HeroSection
             title="Connect and Simplify Logistics with SAP Business Network"
             subtitle="Enhance collaboration and visibility across shippers, carriers, and logistics partners for a smarter supply chain."
+            backgroundImage="https://images.unsplash.com/photo-1454923634634-bd1614719a7b?auto=format&fit=crop&q=80&w=2070"
             />
 
 

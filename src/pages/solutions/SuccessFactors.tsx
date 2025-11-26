@@ -171,6 +171,7 @@ const SuccessFactors = () => {
          <HeroSection
             title="Transform HR with SAP SuccessFactors"
             subtitle="Streamline workforce management and elevate employee experience with intelligent cloud-based HCM solutions."
+            backgroundImage="https://images.unsplash.com/photo-1758691736484-4914d363a3cc?auto=format&fit=crop&q=80&w=2070"
             />
 
 

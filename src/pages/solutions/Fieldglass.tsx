@@ -177,6 +177,7 @@ const Fieldglass = () => {
          <HeroSection
             title="Manage Your External Workforce with SAP Fieldglass"
             subtitle="Optimize services procurement and drive efficiency with a smart, cloud-based VMS."
+            backgroundImage="https://images.unsplash.com/photo-1581578405048-b6f813432ca4?auto=format&fit=crop&q=80&w=2070"
             />
 
 

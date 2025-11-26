@@ -175,6 +175,7 @@ const ProductLifeCycle = () => {
           <HeroSection
             title="Run Smarter with SAP S/4HANA Private Cloud"
             subtitle="Leverage secure, scalable, and compliant ERP innovation tailored to your business needs."
+            backgroundImage="https://images.unsplash.com/photo-1621036579842-9080c7119f67?auto=format&fit=crop&q=80&w=2070"
             />
 
 

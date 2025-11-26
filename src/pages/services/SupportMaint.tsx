@@ -4,6 +4,7 @@ import { ServicePageData } from "@/data/servicesData";
 const supportData: ServicePageData = {
     heroTitle: "Reliable SAP Support & Maintenance – Ensuring Performance, Stability & Continuous Innovation!",
     heroDescription: "In today's dynamic business environment, SAP solutions are critical for streamlining operations and driving business transformation. Our SAP Support & Maintenance offering ensures your SAP systems operate at peak efficiency, enabling you to focus on your core business activities.",
+    heroBackgroundImage: "https://images.unsplash.com/photo-1735875530804-d661ca2001da?auto=format&fit=crop&q=80&w=2070",
 
     processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
     processSteps: [

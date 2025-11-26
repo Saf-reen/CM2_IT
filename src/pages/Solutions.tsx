@@ -172,15 +172,15 @@ const Solutions = () => {
     ];
 
     const projects = [
-        { category: "Implementation" },
-        { category: "Rollouts" },
-        { category: "Training" },
-        { category: "Migrations" },
-        { category: "Upgrades" },
-        { category: "Development" },
-        { category: "Support" },
-        { category: "Integration" },
-        { category: "Testing" },
+        { category: "Implementation", image: "https://images.unsplash.com/photo-1586863065451-6a82fa7e81b9?auto=format&fit=crop&w=800&q=80", link: "/services/implementation" },
+        { category: "Rollouts", image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80", link: "/services/rollouts" },
+        { category: "Training", image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80", link: "/services/training" },
+        { category: "Migrations", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80", link: "/services/migration" },
+        { category: "Upgrades", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80", link: "/services/upgrades" },
+        { category: "Development", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80", link: "/services/development" },
+        { category: "Support", image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80", link: "/services/support" },
+        { category: "Integration", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80", link: "/services/integration" },
+        { category: "Testing", image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80", link: "/services/testing" },
     ];
 
     return (
@@ -197,6 +197,7 @@ const Solutions = () => {
                         Delivering Impact-Driven SAP Implementations<br />for Sustainable Growth
                     </motion.div>
                 }
+                backgroundImage="https://images.unsplash.com/photo-1583321500900-82807e458f3c?auto=format&fit=crop&q=80&w=2070"
             />
 
             {/* 2. PROCESS SECTION (6 STEPS) */}
@@ -560,19 +561,28 @@ const Solutions = () => {
                                 whileHover={{ y: -10 }}
                                 className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
                             >
-                                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/30 via-transparent to-transparent" />
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-7xl font-bold text-primary/20">{idx + 1}</div>
+                                <Link to={project.link} className="block h-full">
+                                    <div className="aspect-[4/3] relative overflow-hidden">
+                                        <img
+                                            src={project.image}
+                                            alt={project.category}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-500" />
+
+                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                                <ArrowRight className="w-8 h-8 text-white" />
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/90 transition-all duration-500 flex items-center justify-center">
-                                        <ArrowRight className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500" />
+                                    <div className="p-6 bg-white border-t border-border/50">
+                                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{project.category}</h3>
+                                        <p className="text-sm text-muted-foreground mt-2 flex items-center gap-2 group-hover:gap-3 transition-all">
+                                            View Case Study <ArrowRight className="w-4 h-4" />
+                                        </p>
                                     </div>
-                                </div>
-                                <div className="p-6 bg-white">
-                                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{project.category}</h3>
-                                    <p className="text-sm text-muted-foreground mt-2">View Case Study</p>
-                                </div>
+                                </Link>
                             </motion.div>
                         ))}
                     </motion.div>

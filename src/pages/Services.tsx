@@ -184,6 +184,7 @@ const Services = () => {
                     </motion.div>
                 }
                 subtitle="We deliver comprehensive SAP services that empower organizations to achieve digital transformation, operational excellence, and sustainable growth through innovative solutions and expert guidance."
+                backgroundImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2070"
             />
 
             {/* 2. SOLUTIONS SECTION */}

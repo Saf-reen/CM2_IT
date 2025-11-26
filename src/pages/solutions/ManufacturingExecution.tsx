@@ -168,6 +168,7 @@ const ManufacturingExecution = () => {
           <HeroSection
             title="Optimize Shop Floor Operations with SAP ME"
             subtitle="Enhance production efficiency, quality, and visibility with intelligent manufacturing execution."
+            backgroundImage="https://images.unsplash.com/photo-1630905119003-329447458f85?auto=format&fit=crop&q=80&w=2070"
             />
 
 

@@ -1,24 +1,26 @@
 import { Target, Eye, BookOpen, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import aboutBg from "@/assets/about-bg.jpg";
+import HeroSection from "@/components/HeroSection";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <div className="min-h-screen animate-fade-in">
       {/* Hero Section changes*/}
-      <section 
-        className="relative h-[60vh] flex items-center justify-center text-center text-primary-foreground"
-        style={{
-          backgroundImage: `linear-gradient(rgba(56, 73, 89, 0.85), rgba(56, 73, 89, 0.85)), url(${aboutBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="container mx-auto px-4 z-10 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">About Us</h1>
-          <p className="text-xl md:text-2xl opacity-90">Empowering businesses through technology</p>
-        </div>
-      </section>
+      <HeroSection
+        title={
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            About Us
+          </motion.div>
+        }
+        subtitle="Empowering businesses through technology"
+        backgroundImage="https://images.unsplash.com/photo-1632923943199-522ffd5e9602?auto=format&fit=crop&q=80&w=2070"
+      />
 
       {/* Mission Section */}
       <section className="py-20 bg-background">

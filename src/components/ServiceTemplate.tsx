@@ -98,7 +98,7 @@ const ServiceTemplate = ({ data }: ServiceTemplateProps) => {
             <HeroSection
                 title={data.heroTitle}
                 subtitle={data.heroDescription}
-                backgroundImage={data.heroBackgroundImage || "/images/sap/sap_hero_banner_1764055717393.png"}
+                backgroundImage={data.heroBackgroundImage}
             />
 
             <section className="py-20 bg-background">

@@ -159,6 +159,7 @@ const AssetPerformance = () => {
           <HeroSection
             title="Maximize Asset Reliability with SAP APM"
             subtitle="Predict failures, improve maintenance, and boost operational performance with intelligent asset management."
+            backgroundImage="https://images.unsplash.com/photo-1623494149133-8c56b7d4e037?auto=format&fit=crop&q=80&w=2070"
             />
 
 

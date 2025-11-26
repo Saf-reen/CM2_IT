@@ -4,7 +4,7 @@ import { ServicePageData } from "@/data/servicesData";
 const migrationData: ServicePageData = {
   heroTitle: "Future-Proof Your Business with Hassle-Free SAP Migration",
   heroDescription: "Migrating to SAP S/4HANA or other SAP platforms is a transformative opportunity for organizations to modernize their business processes, increase operational efficiency, and achieve scalable growth. Our SAP Migration Offering is designed to ensure a seamless transition from legacy systems to SAP's advanced environment while minimizing risks and disruptions.",
-  heroBackgroundImage: "/images/sap/sap_hero_banner_1764055717393.png",
+  heroBackgroundImage: "https://images.unsplash.com/photo-1603224318119-652cfccfae36?auto=format&fit=crop&q=80&w=2070",
 
   processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
   processSteps: [

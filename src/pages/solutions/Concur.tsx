@@ -172,6 +172,7 @@ const Concur = () => {
           <HeroSection
             title="Simplify Travel & Expense Management"
             subtitle="Automate and control business travel, expenses, and invoices with SAP Concur."
+            backgroundImage="https://images.unsplash.com/photo-1707633191700-c4ecb343f004?auto=format&fit=crop&q=80&w=2070"
             />
 
 

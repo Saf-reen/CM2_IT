@@ -193,6 +193,7 @@ const SAPPrivateCloud = () => {
           <HeroSection
             title="Run Smarter with SAP S/4HANA Private Cloud"
             subtitle="Enable secure, scalable, and adaptable ERP transformation on your terms."
+            backgroundImage="https://images.unsplash.com/photo-1659004507132-b7ca8cc94362?auto=format&fit=crop&q=80&w=2070"
             />
 
             {/* 2. SUB-HEADER SECTION */}

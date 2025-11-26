@@ -4,6 +4,7 @@ import { ServicePageData } from "@/data/servicesData";
 const integrationData: ServicePageData = {
   heroTitle: "Seamless SAP Integration: Connect, Automate, and Optimize Your Business Effortlessly.",
   heroDescription: "SAP Integration is essential for organizations seeking seamless communication between SAP systems and other enterprise applications. Our integration solutions ensure data consistency, enhance process efficiency, and enable real-time decision-making by connecting diverse systems and applications.",
+  heroBackgroundImage: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=2070",
 
   processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
   processSteps: [

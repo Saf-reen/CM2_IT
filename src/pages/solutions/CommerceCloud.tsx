@@ -160,6 +160,7 @@ const CommerceCloud = () => {
           <HeroSection
             title="Deliver Personalized Commerce Experiences"
             subtitle="Create seamless, scalable, and secure digital shopping journeys with SAP Commerce Cloud."
+            backgroundImage="https://images.unsplash.com/photo-1511018556340-d16986a1c194?auto=format&fit=crop&q=80&w=2070"
             />
             
             {/* 2. SUB-HEADER SECTION */}

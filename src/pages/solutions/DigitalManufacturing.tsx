@@ -174,6 +174,7 @@ const DigitalManufacturing = () => {
           <HeroSection
             title="Smarter Production Starts with SAP Digital Manufacturing"
             subtitle="Boost operational excellence and deliver high-quality production with intelligent digital manufacturing."
+            backgroundImage="https://images.unsplash.com/photo-1689942007858-7b12bf5864bd?auto=format&fit=crop&q=80&w=2070"
             />
 
 

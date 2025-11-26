@@ -4,6 +4,7 @@ import { ServicePageData } from "@/data/servicesData";
 const upgradesData: ServicePageData = {
     heroTitle: "Seamless SAP Upgrades for Enhanced Performance & Future-Ready Operations",
     heroDescription: "SAP upgrades are critical for organizations aiming to maintain competitive advantages, enhance system performance, and adopt the latest innovations in enterprise resource planning (ERP) systems. Our SAP upgrade services are designed to deliver a seamless transition to newer SAP versions, whether it's a technical upgrade, a functional enhancement, or a full migration to SAP S/4HANA.",
+    heroBackgroundImage: "https://images.unsplash.com/photo-1711097383282-28097ae16b1d?auto=format&fit=crop&q=80&w=2070",
 
     processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
     processSteps: [

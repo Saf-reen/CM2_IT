@@ -4,6 +4,7 @@ import { ServicePageData } from "@/data/servicesData";
 const applicationData: ServicePageData = {
   heroTitle: "Empowering businesses with tailored SAP solutions for seamless application development",
   heroDescription: "Leverage the power of SAP to transform your business processes, enhance operational efficiency, and drive innovation. Our SAP Application Development offering provides customized solutions tailored to your unique business needs. Whether you're looking to enhance existing SAP capabilities or build entirely new applications, we deliver scalable and future-ready solutions to support your digital transformation journey.",
+  heroBackgroundImage: "https://images.unsplash.com/photo-1643513208375-df314b16347a?auto=format&fit=crop&q=80&w=2070",
 
   processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
   processSteps: [

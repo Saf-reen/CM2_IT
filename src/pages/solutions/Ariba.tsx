@@ -195,6 +195,7 @@ const Arbia = () => {
           <HeroSection
             title="Smarter, Connected Procurement with SAP Ariba"
             subtitle="Streamline purchasing and strengthen supplier collaboration with intelligent cloud procurement."
+            backgroundImage="https://images.unsplash.com/photo-1705579604303-3086e4162d34?auto=format&fit=crop&q=80&w=2070"
             />
 
 

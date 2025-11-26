@@ -177,6 +177,7 @@ const RiseWithSap = () => {
                     </motion.div>
                 }
                 subtitle="Accelerate your cloud journey with comprehensive SAP transformation services."
+            backgroundImage="https://images.unsplash.com/photo-1617118602031-1edde7582212?auto=format&fit=crop&q=80&w=2070"
             >
                 <motion.div
                     className="flex flex-col items-center gap-8"

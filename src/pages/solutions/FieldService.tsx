@@ -170,6 +170,7 @@ const FieldService = () => {
           <HeroSection
             title="Deliver Efficient Field Operations with SAP FSM"
             subtitle="Enable intelligent scheduling, faster issue resolution, and real-time service insights."
+            backgroundImage="https://images.unsplash.com/photo-1629608934925-725d09a4eb9a?auto=format&fit=crop&q=80&w=2070"
             />
 
 

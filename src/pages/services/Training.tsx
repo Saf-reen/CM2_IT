@@ -4,6 +4,7 @@ import { ServicePageData } from "@/data/servicesData";
 const trainingData: ServicePageData = {
     heroTitle: "Expert SAP Training & Guidance for Seamless Implementation and User Mastery",
     heroDescription: "Our SAP Instructional and Training Services are designed to empower your workforce with the skills and knowledge they need to maximize the value of your SAP investments. By providing tailored learning experiences, we ensure your teams can efficiently leverage SAP's capabilities to meet your business objectives.",
+    heroBackgroundImage: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2070",
 
     processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
     processSteps: [

@@ -173,6 +173,7 @@ const ManufacturingLogistics = () => {
           <HeroSection
             title="Streamline Manufacturing & Logistics with SAP"
             subtitle="Enable efficient production and seamless supply chain operations with integrated SAP solutions."
+            backgroundImage="https://images.unsplash.com/photo-1748946469976-d0f86878128c?auto=format&fit=crop&q=80&w=2070"
             />
 
 

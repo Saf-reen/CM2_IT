@@ -173,6 +173,7 @@ const Warehouse = () => {
           <HeroSection
             title="Optimize Warehouse Operations with SAP EWM"
             subtitle="Improve inventory accuracy and enhance supply chain efficiency with advanced warehouse management."
+            backgroundImage="https://images.unsplash.com/photo-1709804945989-c8be542e04db?auto=format&fit=crop&q=80&w=2070"
             />
 
 

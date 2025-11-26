@@ -4,7 +4,7 @@ import { ServicePageData } from "@/data/servicesData";
 const implementationData: ServicePageData = {
   heroTitle: "Seamless SAP Implementation for Smart, Scalable, and Future-Ready Enterprises",
   heroDescription: "Implementing SAP solutions can be a transformative journey for organizations seeking to enhance efficiency, drive growth, and improve decision-making processes. Our SAP implementation offering is designed to deliver tailored solutions that align with your business objectives, ensuring a seamless transition to SAP systems with maximum value realization.",
-  heroBackgroundImage: "/images/sap/sap_hero_banner_1764055717393.png",
+  heroBackgroundImage: "https://images.unsplash.com/photo-1586863065451-6a82fa7e81b9?auto=format&fit=crop&q=80&w=2070",
 
   processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
   processSteps: [

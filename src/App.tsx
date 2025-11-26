@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollTop";
 import Home from "./pages/Home";
-import About from "./pages/Company/About.tsx";
+import About from "./pages/About";
 import Solutions from "./pages/Solutions";
 import Services from "./pages/Services";
 

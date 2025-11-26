@@ -4,6 +4,7 @@ import { ServicePageData } from "@/data/servicesData";
 const rolloutsData: ServicePageData = {
     heroTitle: "Seamless SAP Rollouts: Global Reach, Local Expertise, Rapid Deployment",
     heroDescription: "SAP rollouts involve the extension of an existing SAP implementation to new business units, regions, or subsidiaries while maintaining the core configuration and minimizing disruptions. Our SAP rollout services help organizations standardize processes, achieve faster deployments, and ensure alignment with global business objectives.",
+    heroBackgroundImage: "https://images.unsplash.com/photo-1744680740445-0dcf900ce2ed?auto=format&fit=crop&q=80&w=2070",
 
     processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
     processSteps: [

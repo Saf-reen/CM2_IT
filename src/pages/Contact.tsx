@@ -41,6 +41,7 @@ const Contact = () => {
           </motion.div>
         }
         subtitle="Let's discuss how we can help your business grow"
+        backgroundImage="https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&q=80&w=2070"
       />
 
       {/* Contact Section */}

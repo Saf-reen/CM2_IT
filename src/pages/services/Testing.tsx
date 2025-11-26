@@ -3,7 +3,8 @@ import { ServicePageData } from "@/data/servicesData";
 
 const testingData: ServicePageData = {
     heroTitle: "Maximize SAP Efficiency with Expert Testing—Ensuring Stability, Security, and Scalability",
-    heroDescription: "SAP systems are the backbone of many organizations, enabling critical business functions such as finance, supply chain, human resources, and more. Ensuring these systems operate flawlessly is essential for business continuity and growth. Our SAP Testing Services are designed to provide comprehensive, end-to-end testing solutions that ensure the performance, reliability, and scalability of your SAP applications.",
+    heroDescription: "SAP systems are the backbone of many organizations, enabling critical business functions such as finance, supply chain, human resources, and more. Ensuring these systems operate flawlessly is essential for business continuity and growth. Our SAP Testing Services are designed to provide comprehensive, end-to-end testing solutions that ensure the performance, reliability, and scalability of your SAP applications.", 
+    heroBackgroundImage: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=2070",
 
     processTitle: "Delivering Impact-Driven SAP Implementations for Sustainable Growth",
     processSteps: [

@@ -196,6 +196,7 @@ const SAPPublicCloud = () => {
           <HeroSection
           title="Unlock Agility & Innovation with SAP  Public Cloud"
           subtitle="SAP S/4HANA Public Cloud is a comprehensive, next-generation enterprise resource planning (ERP) solution designed for scalability, agility, and innovation"
+          backgroundImage="https://images.unsplash.com/photo-1652037255017-4b6413797090?auto=format&fit=crop&q=80&w=2070"
           />
 
 
