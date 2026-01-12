@@ -106,7 +106,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="onFocus Software Inc Logo" className="h-8 w-auto" />
+            {/* <img src={logo} alt="CM2 IT Software Solutions Pvt. Ltd. Logo" className="h-8 w-auto" /> */}
+            <img src="/cm2-logo.png" alt="CM2" className="h-12 w-auto" />
+            <h1 className="text-2xl font-bold text-white">CM<sub>2</sub></h1>
           </Link>
 
           {/* Desktop Navigation */}

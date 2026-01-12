@@ -8,7 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src="/logo.png" alt="onFocus Software Logo" className="h-10" />
+            {/* <img src="/logo.png" alt="CM2 IT Software Logo" className="h-10" /> */}
+            <div className="flex items-center">
+              <img src="/cm2-logo.png" alt="CM2" className="h-12 w-auto" />
+              <h1 className="text-2xl font-bold text-white">CM<sub>2</sub></h1>
+            </div>
             <p className="text-sm opacity-90">
               Delivering innovative technology solutions for modern businesses.
             </p>
@@ -51,7 +55,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Solutions*/}
-           <div className="space-y-4">
+            <div className="space-y-4">
               <h4 className="text-lg font-semibold">Solutions</h4>
               <ul className="space-y-2">
                 <li><Link to="/solutions/rise-with-sap" className="text-sm hover:text-secondary transition-colors">Rise with SAP</Link></li>
@@ -109,19 +113,19 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold">Contact</h4>
               <div className="space-y-2 text-sm opacity-90">
-                <p>Email: hr@onfocussoftware.com</p>
-                <p>Phone: +1 (480) 886-6824</p>
-                <p>Address: 545 Metro Place South Suite, 100, Dublin, OH 43017</p>
+                <p>Email: hr@cm2itsolutions.com</p>
+                <p>Phone: +91 76759-69278</p>
+                <p>Address: First Floor, 1-121/63 Survey No. 63 Part Hotel Sitara Grand Backside, Miyapur, Telangana 500049</p>
               </div>
             </div>
           </div>
-       </div>
-          
+        </div>
 
-          
+
+
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm opacity-90">
-          <p>&copy; {new Date().getFullYear()} onFocus Software Inc. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CM2 IT Software Solutions Pvt. Ltd.. All rights reserved.</p>
         </div>
       </div>
     </footer>

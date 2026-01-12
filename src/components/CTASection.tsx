@@ -12,7 +12,7 @@ interface CTASectionProps {
 
 const CTASection = ({
     title = "Ready to Grow Your Business?",
-    description = "Partner with OnFocus to transform your enterprise with world-class solutions. Let's build a future-ready digital ecosystem together.",
+    description = "Partner with CM2 to transform your enterprise with world-class solutions. Let's build a future-ready digital ecosystem together.",
     buttonText = "Contact Us",
     buttonLink = "/contact",
     className = ""

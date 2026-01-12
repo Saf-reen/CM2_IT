@@ -162,21 +162,21 @@ const Contact = () => {
                   {
                     icon: Mail,
                     title: "Email",
-                    content: ["hr@onfocussoftware.com"],
+                    content: ["hr@cm2itsolutions.com"],
                     color: "text-blue-500",
                     bg: "bg-blue-500/10"
                   },
                   {
                     icon: Phone,
                     title: "Phone",
-                    content: ["+1 (480) 886-6824"],
+                    content: ["+91 76759-69278"],
                     color: "text-green-500",
                     bg: "bg-green-500/10"
                   },
                   {
                     icon: MapPin,
                     title: "Office",
-                    content: ["545 Metro Place South Suite, 100", "Dublin, OH 43017", "USA"],
+                    content: ["First Floor, 1-121/63","Survey No. 63 Part Hotel Sitara Grand Backside", "Miyapur, Telangana 500049"],
                     color: "text-purple-500",
                     bg: "bg-purple-500/10"
                   }
@@ -220,7 +220,7 @@ const Contact = () => {
             className="rounded-3xl overflow-hidden shadow-xl border border-border h-[400px] md:h-[500px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.212310483609!2d-83.13238690000001!3d40.0929791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883893252959b263%3A0x2ade6a99b698cde2!2s545%20Metro%20Pl%20S%20Ste%2C%20100%2C%20Dublin%2C%20OH%2043017%2C%20USA!5e0!3m2!1sen!2sin!4v1760960253669!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.280746844092!2d78.3542804!3d17.4941067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9398a74e6225%3A0x9ab33bfbaff07f32!2sSria%20Infotech%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1768236329231!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
