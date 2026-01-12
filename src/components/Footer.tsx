@@ -11,7 +11,10 @@ const Footer = () => {
             {/* <img src="/logo.png" alt="CM2 IT Software Logo" className="h-10" /> */}
             <div className="flex items-center">
               <img src="/cm2-logo.png" alt="CM2" className="h-12 w-auto" />
-              <h1 className="text-2xl font-bold text-white">CM<sub>2</sub></h1>
+              <div className="flex flex-col pl-2">
+                <h1 className="text-lg font-bold text-white">CM<sub>2</sub> Software</h1>
+                <p className="text-sm text-white">Solutions Pvt. Ltd.</p>
+              </div>
             </div>
             <p className="text-sm opacity-90">
               Delivering innovative technology solutions for modern businesses.
