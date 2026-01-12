@@ -306,7 +306,7 @@ const About = () => {
       </section>
 
       {/* 6. LEADERSHIP SECTION */}
-      <section className="py-24 bg-secondary/10">
+      {/*<section className="py-24 bg-secondary/10">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -354,7 +354,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* 7. TEAM COMPOSITION */}
       <section className="py-24 bg-background">
