@@ -108,7 +108,10 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-3">
             {/* <img src={logo} alt="CM2 IT Software Solutions Pvt. Ltd. Logo" className="h-8 w-auto" /> */}
             <img src="/cm2-logo.png" alt="CM2" className="h-12 w-auto" />
-            <h1 className="text-2xl font-bold text-white">CM<sub>2</sub></h1>
+            <div className="flex flex-col">
+              <h1 className="text-lg font-bold text-white">CM<sub>2</sub> IT Software</h1>
+              <p className="text-sm text-white">Solutions Pvt. Ltd.</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
